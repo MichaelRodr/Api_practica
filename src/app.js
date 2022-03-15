@@ -5,7 +5,7 @@ const morgan = require('morgan');
 
 //Settings
 app.set('port',process.env.PORT || 3000);//process.env.PORT se utiliza para indicar que si exite un puerto predefinido por el proveesor de la nube lo utilice sino usa el puerto 3000 por defecto.
-app.set('json spaces',2);
+app.set('json spaces', 2);
 
 //Middleware
 app.use(morgan('dev'));//Se obtiene una respuesta
