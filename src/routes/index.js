@@ -2,6 +2,12 @@ const {Router} = require('express');
 const router = Router();
 
 //Routes
-app.get('/',(req,res) =>{
-    res.json({'Title':'hello World'});
+router.get('/',(req,res) =>{
+    const data = {
+        'Title':'hello World',
+        'wesite':'matchdev.io'
+    };
+    res.json(data);
 });
+
+module.exports = router;
