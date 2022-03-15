@@ -14,6 +14,8 @@ app.use(express.json());//Metodo Para entender archivos.json
 
 //routes
 app.use(require('./routes/index'));
+app.use('/api/movies',require('./routes/movies'));
+
 
 //Starting Server
 app.listen(app.get('port'),()=> {
