@@ -17,7 +17,7 @@ router.post('/',(req,res)=>{
     
     if(title && director && year && rating) { //Se verifican que estan los datos
        
-        const id = movies.length + 1;// Incrementa el ID 
+        const id = movies.length + 1;// Incrementa el ID que sera creado
         const newMovie = {id, ...req.body };   //Se guardan los datos
         movies.push(newMovie);
         res.json(movies)
@@ -35,11 +35,11 @@ router.put('/:id',(req, res) => {
    
     if( title && director && year && rating) {
         _.each(movies, (movie, i) => {
-            if(movie.id == id) {
-                movie.title = director;
-                movie.director = title;
+            if(movie.id === id) {
+                movie.title = title;
+                movie.director = director;
                 movie.year = year;
-                movie.rating = rating;
+                movie.rating = imdbRating;
             }
         });
        
